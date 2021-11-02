@@ -1,4 +1,5 @@
 import pygame
+import pygame.freetype
 from abc import ABC, abstractclassmethod
 
 black = (0, 0, 0) # đường đi
@@ -63,24 +64,34 @@ class content(ABC):
         pass
 
 class rock(content):
+    def __init__(self):
+        self.image = pygame.image.load('assets/wall.png')
+        self.rect = self.image.get_rect()
+
     def get_color(self):
         return gray_light
     
     def draw(self, surf, pos, block_size):
         i = pos[0]
         j = pos[1]
-        color = self.get_color()
-        pygame.draw.rect(surf, color, (i*block_size+1, j*block_size+1, block_size-2, block_size-2))
+        surf.blit(self.image, (i*block_size, j*block_size))
+        # color = self.get_color()
+        # pygame.draw.rect(surf, color, (i*block_size+1, j*block_size+1, block_size-2, block_size-2))
 
 class box(content):
+    def __init__(self):
+        self.image = pygame.image.load('assets/box.png')
+        self.rect = self.image.get_rect()
+
     def get_color(self):
         return brown
     
     def draw(self, surf, pos, block_size):
         i = pos[0]
         j = pos[1]
-        color = self.get_color()
-        pygame.draw.rect(surf, color, (i*block_size+10, j*block_size+10, block_size-20, block_size-20))
+        surf.blit(self.image, (i*block_size, j*block_size))
+        # color = self.get_color()
+        # pygame.draw.rect(surf, color, (i*block_size+10, j*block_size+10, block_size-20, block_size-20))
 
 class empty(content):
     def get_color(self):
@@ -119,11 +130,15 @@ class star(content):
         pygame.draw.rect(surf, color, (i*block_size+15, j*block_size+15, block_size-30, block_size-30))
 
 class player(content):
+
+    def __init__(self):
+        self.image = pygame.image.load('assets/player.png')
+        self.rect = self.image.get_rect()
+        
     def get_color(self):
         return blue_light
 
     def move(self, level, keys, locks):
-        # print(self.get_key_run(level, keys), self.get_lock_run(level, locks))
         dir_x, dir_y, backward = self.get_input()
         self.pos = self.get_position(level)
         i = self.pos[0]
@@ -223,7 +238,10 @@ class player(content):
         return locks - dem
 
     def draw(self, surf, pos, block_size):
+        
         i = pos[0]
         j = pos[1]
-        color = self.get_color()
-        pygame.draw.rect(surf, color, (i*block_size+1, j*block_size+1, block_size-2, block_size-2))
+        surf.blit(self.image, (i*block_size+8, j*block_size+8))
+        # color = self.get_color()
+        # pygame.draw.rect(surf, color, (i*block_size+1, j*block_size+1, block_size-2, block_size-2))
+

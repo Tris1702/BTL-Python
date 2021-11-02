@@ -10,7 +10,8 @@ class Menu:
         self.surf = surf
         self.buttons = []
         self.maps = [maps.Map1(), maps.Map2(), maps.Map3(), maps.Map4(), maps.Map5(), maps.Map6(), maps.Map7(), maps.Map8(), maps.Map9(), maps.Map10(), maps.Map11()]
-        self.create_menu()      
+        self.create_menu() 
+        
         while True:
             self.selected_level = self.select_level()
             self.run_game(self.selected_level)
@@ -45,15 +46,17 @@ class Menu:
                         return sel_map
             self.re_make_selection_window(self.surf)
 
+
     def re_make_selection_window(self, surf):
         surf.fill((255, 255, 255))
         self.make_buttons(surf)
         pygame.display.update()
+        
 
     def make_buttons(self, surf):
         for butt in self.buttons:
             butt.draw(surf)
-    
+            
     def run_game(self, map_to_play):
         map_run.RunMap(map_to_play, self.surf).run_map()
     

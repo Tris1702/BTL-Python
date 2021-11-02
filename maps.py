@@ -56,7 +56,7 @@ class Map1(Map):
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
-        return "level 1"
+        return "Level: 1"
 
     def get_width(self):
         return len(self.level[0])
@@ -85,7 +85,7 @@ class Map2(Map):
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
-        return "level 2"
+        return "Level: 2"
 
     def get_width(self):
         return len(self.level[0])
@@ -114,7 +114,7 @@ class Map3(Map):
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
-        return "level 3"
+        return "Level: 3"
 
     def get_width(self):
         return len(self.level[0])
@@ -143,7 +143,7 @@ class Map4(Map):
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
-        return "level 4"
+        return "Level: 4"
 
     def get_width(self):
         return len(self.level[0])
@@ -172,7 +172,7 @@ class Map5(Map):
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
-        return "level 5"
+        return "Level: 5"
 
     def get_width(self):
         return len(self.level[0])
@@ -201,7 +201,7 @@ class Map6(Map):
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
-        return "level 6"
+        return "Level: 6"
 
     def get_width(self):
         return len(self.level[0])
@@ -230,7 +230,7 @@ class Map7(Map):
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
-        return "level 7"
+        return "Level: 7"
 
     def get_width(self):
         return len(self.level[0])
@@ -259,7 +259,7 @@ class Map8(Map):
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
-        return "level 8"
+        return "Level: 8"
 
     def get_width(self):
         return len(self.level[0])
@@ -288,7 +288,7 @@ class Map9(Map):
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
-        return "level 9"
+        return "Level: 9"
 
     def get_width(self):
         return len(self.level[0])
@@ -317,7 +317,7 @@ class Map10(Map):
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
-        return "level 10"
+        return "Level: 10"
 
     def get_width(self):
         return len(self.level[0])
@@ -345,7 +345,7 @@ class Map11(Map):
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
-        return "level 11"
+        return "Level: 11"
 
     def get_width(self):
         return len(self.level[0])

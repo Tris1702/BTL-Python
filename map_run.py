@@ -13,6 +13,7 @@ class RunMap:
         self.locks = map_obj.get_lock()
         self.level = self.make_level_dict()
         self.player = self.map.get_player()
+        self.main_font = pygame.font.SysFont("comicsans", 50)
 
     def make_level_dict(self): # lưu vị trí i, j và trạng thái ô
         level = {}
@@ -46,17 +47,28 @@ class RunMap:
                 if not isinstance(ent.content, box):
                     return False
         return True
-    
+
     def run_map(self):
+        
         block_size = self.settings.block_size 
         self.surf = pygame.display.set_mode((self.rows*block_size + 8 * block_size, self.cols*block_size + 2 * block_size)) # vẽ lại kích thước màn hình       
+        
         level_not_done = True
+
         while level_not_done:
+            self.surf.fill((0, 0, 0))
+            
+            sum_key = self.main_font.render(f"Keys: {self.player.get_key_run(self.level, self.keys) - self.player.get_lock_run(self.level, self.locks)}", 1, (255,255,255))
+            self.surf.blit(sum_key, (900, 680))
+            
+            name_level = self.main_font.render(self.map.get_name(), 1, (255,255,255))
+            self.surf.blit(name_level, (50, 20))
+
             keys=pygame.key.get_pressed()
             if keys[pygame.K_ESCAPE]:
                 return
-            elif keys[pygame.K_r]:
-                continue
+            # elif keys[pygame.K_r]:
+            #     continue
             self.player.move(self.level, self.keys, self.locks)
             if self.check_flag(self.level) and self.check_star(self.level) and self.check_box(self.level):
                 return
