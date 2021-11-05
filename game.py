@@ -14,7 +14,7 @@ pygame.display.set_caption("ChiChi World")
 CLOCK = pygame.time.Clock()
 
 # Work
-WORK = 20000000
+WORK = 10000000
 
 # Loading BG
 LOADING_BG = pygame.image.load('assets/Loading Bar Background.png')
