@@ -1,19 +1,17 @@
 import pygame
 
 class Settings:
-    
     def __init__(self):
+
         # background
         self.screen_width = 1080
         self.screen_height = 720
         self.screen_size = (1080, 720)
-        self.background_color = "#0d0e2e"
-
-        # buttons
-        self.button_width = self.screen_width/10 # kích thước 1 ô menu
-        self.spacing_width = self.screen_width/7 # khoảng cách hàng cột đầu vói màn hình ở menu
-        self.spacing_height = self.screen_width/15 # khoảng cách hàng đầu với màn hình ở menu
+        self.background_color = "#2A3756"
 
         # map_run
-        self.block_size = 60 # kích thước 1 ô
+        self.block_size = 55 # kích thước 1 ô
+
+        #font
+        self.font = pygame.font.SysFont("Showcard Gothic", 35)
         

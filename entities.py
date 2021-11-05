@@ -1,9 +1,9 @@
 import pygame
-import pygame.freetype
+import time
 from abc import ABC, abstractclassmethod
 
-black = (0, 0, 0) # đường đi
-white = (255, 255, 255) 
+black = "#0D0E2E" # đường đi
+white = "#dbdfe2"
 blue_light = (39, 218, 238) # nhân vật
 blue_dark = (0, 0, 246) # đích
 gray_light = (192, 192, 192) # tường
@@ -26,39 +26,37 @@ class road(block):
     def draw(self, surf,  pos, block_size):
         i = pos[0]
         j = pos[1]
-        pygame.draw.rect(surf, black, (i*block_size+1, j*block_size+1, block_size-2, block_size-2))
+        pygame.draw.rect(surf, black, (i*block_size, j*block_size, block_size, block_size))
         self.content.draw(surf,  pos, block_size)
 
 class flag(block):
     def draw(self, surf,  pos, block_size):
         i = pos[0]
         j = pos[1]
-        pygame.draw.rect(surf, blue_dark, (i*block_size+1, j*block_size+1, block_size-2, block_size-2))
+        pygame.draw.rect(surf, black, (i*block_size, j*block_size, block_size, block_size))
+        image = pygame.image.load('assets/chanh chanh.png')
+        surf.blit(image, (i * block_size + 6, j * block_size + 5))
         self.content.draw(surf,  pos, block_size)
 
 class door(block):
     def draw(self, surf, pos, block_size):
         i = pos[0]
         j = pos[1]
-        pygame.draw.rect(surf, gray_dark, (i*block_size+1, j*block_size+1, block_size-2, block_size-2))
+        pygame.draw.rect(surf, black, (i * block_size, j * block_size, block_size, block_size))
+        image = pygame.image.load('assets/door.png')
+        surf.blit(image, (i * block_size, j * block_size))
         self.content.draw(surf,  pos, block_size)
     
 class hole(block):
     def draw(self, surf,  pos, block_size):
         i = pos[0]
         j = pos[1]
-        pygame.draw.rect(surf, green, (i*block_size+1, j*block_size+1, block_size-2, block_size-2))
-        r = block_size / 2
-        color = black
-        center = (i*block_size + r, j*block_size + r)
-        pygame.draw.circle(surf, color, center, r)
-        self.content.draw(surf,  pos, block_size)
+        pygame.draw.rect(surf, black, (i*block_size, j*block_size, block_size, block_size))
+        image = pygame.image.load('assets/hole.png')
+        surf.blit(image, (i * block_size + 10, j * block_size + 10))
+        self.content.draw(surf, pos, block_size)
 
 class content(ABC):
-    @abstractclassmethod
-    def get_color(self):
-        pass
-
     @abstractclassmethod
     def draw(self, surf, pos, block_size):
         pass
@@ -68,69 +66,57 @@ class rock(content):
         self.image = pygame.image.load('assets/wall.png')
         self.rect = self.image.get_rect()
 
-    def get_color(self):
-        return gray_light
-    
     def draw(self, surf, pos, block_size):
         i = pos[0]
         j = pos[1]
+        pygame.draw.rect(surf, white, (i * block_size, j * block_size, block_size, block_size))
         surf.blit(self.image, (i*block_size, j*block_size))
-        # color = self.get_color()
-        # pygame.draw.rect(surf, color, (i*block_size+1, j*block_size+1, block_size-2, block_size-2))
 
 class box(content):
     def __init__(self):
         self.image = pygame.image.load('assets/box.png')
         self.rect = self.image.get_rect()
 
-    def get_color(self):
-        return brown
+    def draw(self, surf, pos, block_size):
+        i = pos[0]
+        j = pos[1]
+        surf.blit(self.image, (i*block_size, j*block_size))
+
+class empty(content):
+    def draw(self, surf, pos, block_size):
+        pass
+
+class key(content):
+    def __init__(self):
+        self.image = pygame.image.load('assets/key.png')
+        self.rect = self.image.get_rect()
+    
+    def draw(self, surf, pos, block_size):
+        i = pos[0]
+        j = pos[1]
+        surf.blit(self.image, (i*block_size+10, j*block_size+10))
+
+class lock(content):
+    def __init__(self):
+        self.image = pygame.image.load('assets/lock.png')
+        self.rect = self.image.get_rect()
     
     def draw(self, surf, pos, block_size):
         i = pos[0]
         j = pos[1]
         surf.blit(self.image, (i*block_size, j*block_size))
-        # color = self.get_color()
-        # pygame.draw.rect(surf, color, (i*block_size+10, j*block_size+10, block_size-20, block_size-20))
-
-class empty(content):
-    def get_color(self):
-        return black
-    def draw(self, surf, pos, block_size):
-        pass
-
-class key(content):
-    def get_color(self):
-        return green
-    
-    def draw(self, surf, pos, block_size):
-        i = pos[0]
-        j = pos[1]
-        color = self.get_color()
-        pygame.draw.rect(surf, color, (i*block_size+15, j*block_size+15, block_size-30, block_size-30))
-
-class lock(content):
-    def get_color(self):
-        return red
-    
-    def draw(self, surf, pos, block_size):
-        i = pos[0]
-        j = pos[1]
-        color = self.get_color()
-        pygame.draw.rect(surf, color, (i*block_size+10, j*block_size+10, block_size-20, block_size-20))
 
 class star(content):
-    def get_color(self):
-        return yellow
+    def __init__(self):
+        self.image = pygame.image.load('assets/star.png')
+        self.rect = self.image.get_rect()
     
     def draw(self, surf, pos, block_size):
         i = pos[0]
         j = pos[1]
-        color = self.get_color()
-        pygame.draw.rect(surf, color, (i*block_size+15, j*block_size+15, block_size-30, block_size-30))
+        surf.blit(self.image, (i*block_size + 12, j*block_size + 12))
 
 class player(content):
-
     def __init__(self):
         self.image = pygame.image.load('assets/player.png')
         self.rect = self.image.get_rect()
@@ -206,15 +192,19 @@ class player(content):
             for key in keys:
                 c_key = True if keys[pygame.K_c] else False
                 if keys[pygame.K_LEFT]:
+                    time.sleep(0.1)
                     return -1, 0, c_key
                 
                 elif keys[pygame.K_RIGHT]:
+                    time.sleep(0.1)
                     return 1, 0, c_key
 
                 elif keys[pygame.K_UP]:
+                    time.sleep(0.1)
                     return 0, -1, c_key
 
                 elif keys[pygame.K_DOWN]:
+                    time.sleep(0.1)
                     return 0, 1, c_key
         return 0, 0, False
 
@@ -238,10 +228,7 @@ class player(content):
         return locks - dem
 
     def draw(self, surf, pos, block_size):
-        
         i = pos[0]
         j = pos[1]
-        surf.blit(self.image, (i*block_size+8, j*block_size+8))
-        # color = self.get_color()
-        # pygame.draw.rect(surf, color, (i*block_size+1, j*block_size+1, block_size-2, block_size-2))
+        surf.blit(self.image, (i*block_size+6, j*block_size+6))
 
