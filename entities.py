@@ -108,7 +108,7 @@ class lock(content):
 
 class star(content):
     def __init__(self):
-        self.image = pygame.image.load('assets/star.png')
+        self.image = pygame.image.load('assets/cake.png')
         self.rect = self.image.get_rect()
     
     def draw(self, surf, pos, block_size):
