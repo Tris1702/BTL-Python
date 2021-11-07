@@ -21,6 +21,19 @@ class RunMap:
         self.level_1_img = pygame.image.load('assets/Map 1.png')
         self.level_2_img = pygame.image.load('assets/Map 2.png')
         self.level_3_img = pygame.image.load('assets/Map 3.png')
+        self.level_4_img = pygame.image.load('assets/Map 4.png')
+        self.level_5_img = pygame.image.load('assets/Map 5.png')
+        self.level_6_img = pygame.image.load('assets/Map 6.png')
+        self.level_7_img = pygame.image.load('assets/Map 7.png')
+        self.level_8_img = pygame.image.load('assets/Map 6.png')
+        self.level_9_img = pygame.image.load('assets/Map 6.png')
+        self.level_10_img = pygame.image.load('assets/Map 6.png')
+        self.level_11_img = pygame.image.load('assets/Map 6.png')
+        self.level_12_img = pygame.image.load('assets/Map 6.png')
+        self.level_13_img = pygame.image.load('assets/Map 6.png')
+        self.level_14_img = pygame.image.load('assets/Map 6.png')
+        self.level_15_img = pygame.image.load('assets/Map 6.png')
+        self.level_16_img = pygame.image.load('assets/Map 6.png')
         self.back_img = pygame.image.load('assets/Back.png')
 
         # create button instances
@@ -90,43 +103,43 @@ class RunMap:
             self.surf.blit(self.level_3_img, (0, 0))
 
         if self.map.get_name() == "4":
-            self.surf.blit(self.level_1_img, (0, 0))
+            self.surf.blit(self.level_4_img, (0, 0))
 
         if self.map.get_name() == "5":
-            self.surf.blit(self.level_1_img, (0, 0))
+            self.surf.blit(self.level_5_img, (0, 0))
 
         if self.map.get_name() == "6":
-            self.surf.blit(self.level_1_img, (0, 0))
+            self.surf.blit(self.level_6_img, (0, 0))
 
         if self.map.get_name() == "7":
-            self.surf.blit(self.level_1_img, (0, 0))
+            self.surf.blit(self.level_7_img, (0, 0))
 
         if self.map.get_name() == "8":
-            self.surf.blit(self.level_1_img, (0, 0))
+            self.surf.blit(self.level_8_img, (0, 0))
 
         if self.map.get_name() == "9":
-            self.surf.blit(self.level_1_img, (0, 0))
+            self.surf.blit(self.level_9_img, (0, 0))
 
         if self.map.get_name() == "10":
-            self.surf.blit(self.level_1_img, (0, 0))
+            self.surf.blit(self.level_10_img, (0, 0))
 
         if self.map.get_name() == "11":
-            self.surf.blit(self.level_1_img, (0, 0))
+            self.surf.blit(self.level_11_img, (0, 0))
 
         if self.map.get_name() == "12":
-            self.surf.blit(self.level_1_img, (0, 0))
+            self.surf.blit(self.level_12_img, (0, 0))
 
         if self.map.get_name() == "13":
-            self.surf.blit(self.level_1_img, (0, 0))
+            self.surf.blit(self.level_13_img, (0, 0))
 
         if self.map.get_name() == "14":
-            self.surf.blit(self.level_1_img, (0, 0))
+            self.surf.blit(self.level_14_img, (0, 0))
 
         if self.map.get_name() == "15":
-            self.surf.blit(self.level_1_img, (0, 0))
+            self.surf.blit(self.level_15_img, (0, 0))
 
         if self.map.get_name() == "16":
-            self.surf.blit(self.level_1_img, (0, 0))
+            self.surf.blit(self.level_16_img, (0, 0))
 
     def make_level_dict(self): # lưu vị trí i, j và trạng thái ô
         level = {}
