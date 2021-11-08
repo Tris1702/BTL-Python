@@ -35,14 +35,26 @@ class Map(ABC):
     def get_lock(self):
         pass
 
+    @abstractmethod
+    def set_lock_level(self, lock):
+        pass
+
+    @abstractmethod
+    def get_lock_level(self):
+        pass
+
     def get_level(self):
         return self.level
+
+    def set_level(self, level):
+        self.level = level
 
     def get_player(self):
         return p
 
 class Map1(Map):
     def __init__(self):
+        self.lock_level = False
         self.level = [
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)], 
             [road(r), road(e), road(e), road(e), road(e), road(r), road(e), road(e), road(e), road(r)],
@@ -56,7 +68,7 @@ class Map1(Map):
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
-        return "Level: 1"
+        return "1"
 
     def get_width(self):
         return len(self.level[0])
@@ -70,11 +82,18 @@ class Map1(Map):
     def get_lock(self):
         return 0
 
+    def set_lock_level(self, lock):
+        self.lock_level = lock
+
+    def get_lock_level(self):
+        return self.lock_level
+
 class Map2(Map):
     def __init__(self):
+        self.lock_level = False
         self.level = [
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)], 
-            [road(r), road(e), road(e), road(e), road(e), road(r), road(r), road(r), road(r), road(r)],
+            [road(r), road(s), road(e), road(e), road(e), road(r), road(r), road(r), road(r), road(r)],
             [road(r), road(e), road(r), road(r), road(e), road(e), road(e), road(r), road(s), road(r)],
             [road(r), road(e), road(e), road(r), road(r), road(r), road(e), road(r), road(e), road(r)],
             [road(r), road(e), road(e), road(e), road(e), road(r), road(s), road(r), road(e), road(r)],
@@ -85,7 +104,7 @@ class Map2(Map):
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
-        return "Level: 2"
+        return "2"
 
     def get_width(self):
         return len(self.level[0])
@@ -99,8 +118,15 @@ class Map2(Map):
     def get_lock(self):
         return 0
 
+    def set_lock_level(self, lock):
+        self.lock_level = lock
+
+    def get_lock_level(self):
+        return self.lock_level
+
 class Map3(Map):
     def __init__(self):
+        self.lock_level = False
         self.level = [
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)], 
             [road(r), road(s), road(e), road(e), road(r), road(e), road(e), road(e), road(s), road(r)],
@@ -114,7 +140,7 @@ class Map3(Map):
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
-        return "Level: 3"
+        return "3"
 
     def get_width(self):
         return len(self.level[0])
@@ -127,9 +153,16 @@ class Map3(Map):
     
     def get_lock(self):
         return 0
+
+    def set_lock_level(self, lock):
+        self.lock_level = lock
+
+    def get_lock_level(self):
+        return self.lock_level
 
 class Map4(Map):
     def __init__(self):
+        self.lock_level = False
         self.level = [
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)], 
             [road(r), flag(e), road(e), road(e), road(e), road(r), road(r), road(e), road(e), road(r)],
@@ -143,7 +176,7 @@ class Map4(Map):
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
-        return "Level: 4"
+        return "4"
 
     def get_width(self):
         return len(self.level[0])
@@ -156,9 +189,16 @@ class Map4(Map):
 
     def get_lock(self):
         return 0
+
+    def set_lock_level(self, lock):
+        self.lock_level = lock
+
+    def get_lock_level(self):
+        return self.lock_level
     
 class Map5(Map):
     def __init__(self):
+        self.lock_level = False
         self.level = [
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)], 
             [road(r), flag(e), road(e), road(e), road(e), road(r), road(r), road(e), road(e), road(r)],
@@ -172,7 +212,7 @@ class Map5(Map):
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
-        return "Level: 5"
+        return "5"
 
     def get_width(self):
         return len(self.level[0])
@@ -186,8 +226,15 @@ class Map5(Map):
     def get_lock(self):
         return 0
 
+    def set_lock_level(self, lock):
+        self.lock_level = lock
+
+    def get_lock_level(self):
+        return self.lock_level
+
 class Map6(Map):
     def __init__(self):
+        self.lock_level = False
         self.level = [
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)], 
             [road(r), road(e), road(k), road(s), road(r), road(e), road(e), road(e), road(r), road(r)],
@@ -201,7 +248,7 @@ class Map6(Map):
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
-        return "Level: 6"
+        return "6"
 
     def get_width(self):
         return len(self.level[0])
@@ -215,8 +262,15 @@ class Map6(Map):
     def get_lock(self):
         return 4
 
+    def set_lock_level(self, lock):
+        self.lock_level = lock
+
+    def get_lock_level(self):
+        return self.lock_level
+
 class Map7(Map):
     def __init__(self):
+        self.lock_level = False
         self.level = [
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)], 
             [road(r), road(e), road(l), road(e), road(k), road(r), road(e), road(e), road(e), road(r)],
@@ -230,7 +284,7 @@ class Map7(Map):
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
-        return "Level: 7"
+        return "7"
 
     def get_width(self):
         return len(self.level[0])
@@ -244,8 +298,15 @@ class Map7(Map):
     def get_lock(self):
         return 6
 
+    def set_lock_level(self, lock):
+        self.lock_level = lock
+
+    def get_lock_level(self):
+        return self.lock_level
+
 class Map8(Map):
     def __init__(self):
+        self.lock_level = False
         self.level = [
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)], 
             [road(r), flag(e), road(e), road(r), road(e), road(l), door(k), road(l), door(s), road(r)],
@@ -259,7 +320,7 @@ class Map8(Map):
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
-        return "Level: 8"
+        return "8"
 
     def get_width(self):
         return len(self.level[0])
@@ -273,8 +334,15 @@ class Map8(Map):
     def get_lock(self):
         return 8
 
+    def set_lock_level(self, lock):
+        self.lock_level = lock
+
+    def get_lock_level(self):
+        return self.lock_level
+
 class Map9(Map):
     def __init__(self):
+        self.lock_level = False
         self.level = [
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)], 
             [road(r), road(p), road(e), road(e), road(l), door(s), road(e), road(e), road(r), road(r)],
@@ -288,7 +356,7 @@ class Map9(Map):
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
-        return "Level: 9"
+        return "9"
 
     def get_width(self):
         return len(self.level[0])
@@ -302,8 +370,15 @@ class Map9(Map):
     def get_lock(self):
         return 9
 
+    def set_lock_level(self, lock):
+        self.lock_level = lock
+
+    def get_lock_level(self):
+        return self.lock_level
+
 class Map10(Map):
     def __init__(self):
+        self.lock_level = False
         self.level = [
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)], 
             [road(r), road(s), road(r), flag(e), road(r), road(r), road(l), road(s), road(k), road(r)],
@@ -317,7 +392,7 @@ class Map10(Map):
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
-        return "Level: 10"
+        return "10"
 
     def get_width(self):
         return len(self.level[0])
@@ -331,9 +406,16 @@ class Map10(Map):
     def get_lock(self):
         return 8
 
+    def set_lock_level(self, lock):
+        self.lock_level = lock
+
+    def get_lock_level(self):
+        return self.lock_level
+
+
 class Map11(Map):
-    
     def __init__(self):
+        self.lock_level = False
         self.level = [
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)], 
             [road(r), flag(e), road(b), hole(e), road(r), road(r), road(r), road(r)],
@@ -345,7 +427,7 @@ class Map11(Map):
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
-        return "Level: 11"
+        return "11"
 
     def get_width(self):
         return len(self.level[0])
@@ -358,3 +440,9 @@ class Map11(Map):
 
     def get_lock(self):
         return 0
+
+    def set_lock_level(self, lock):
+        self.lock_level = lock
+
+    def get_lock_level(self):
+        return self.lock_level
