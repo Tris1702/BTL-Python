@@ -1,7 +1,7 @@
 import pygame
 import buttons
 import maps
-from entities import flag, player, star, hole, box
+from entities import flag, player, star
 from settings import Settings
 import time
 
@@ -31,10 +31,10 @@ class RunMap:
         self.level_10_img = pygame.image.load('assets/Map 10.png')
         self.level_11_img = pygame.image.load('assets/Map 11.png')
         self.level_12_img = pygame.image.load('assets/Map 12.png')
-        self.level_13_img = pygame.image.load('assets/Map 6.png')
-        self.level_14_img = pygame.image.load('assets/Map 6.png')
-        self.level_15_img = pygame.image.load('assets/Map 6.png')
-        self.level_16_img = pygame.image.load('assets/Map 6.png')
+        self.level_13_img = pygame.image.load('assets/Map 13.png')
+        self.level_14_img = pygame.image.load('assets/Map 14.png')
+        self.level_15_img = pygame.image.load('assets/Map 15.png')
+        self.level_16_img = pygame.image.load('assets/Map 16.png')
         self.back_img = pygame.image.load('assets/Back.png')
 
         # create button instances
