@@ -7,15 +7,18 @@ from select import Select
 import buttons
 from settings import Settings
 
+
 class Start:
     def __init__(self, surf):
         self.surf = surf
         self.setting = Settings()
 
-        self.maps = [maps.Map11(), maps.Map2(), maps.Map3(), maps.Map4(), maps.Map5(), maps.Map6(), maps.Map7(), maps.Map8(),
-                     maps.Map9(), maps.Map10(), maps.Map11(), maps.Map12(), maps.Map13(), maps.Map14(), maps.Map15(), maps.Map16()]
+        self.maps = [maps.Map11(), maps.Map2(), maps.Map3(), maps.Map4(), maps.Map5(), maps.Map6(), maps.Map7(),
+                     maps.Map8(),
+                     maps.Map9(), maps.Map10(), maps.Map11(), maps.Map12(), maps.Map13(), maps.Map14(), maps.Map15(),
+                     maps.Map16()]
 
-        #load images
+        # load images
         self.start_img = pygame.image.load('assets/Start.png')
 
         self.logo_img = pygame.image.load('assets/Logo.png')
@@ -27,7 +30,7 @@ class Start:
 
         self.exit_img = pygame.image.load('assets/Exit.png')
 
-        #create button instances
+        # create button instances
         self.start_button = buttons.Buttons(400, 530, self.start_img, 1)
         self.about_us_button = buttons.Buttons(982, 626, self.about_us, 1)
         self.exit_button = buttons.Buttons(810, 155, self.exit_img, 1)
@@ -37,7 +40,7 @@ class Start:
     def run(self, surf):
 
         surf.fill(self.setting.background_color)
-        
+
         surf.blit(self.logo_img, (300, 40))
 
         if self.start_button.draw(surf):

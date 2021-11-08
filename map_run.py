@@ -5,6 +5,7 @@ from entities import flag, player, star, hole, box
 from settings import Settings
 import time
 
+
 class RunMap:
     def __init__(self, map_obj, surf):
         self.map = map_obj
@@ -17,7 +18,7 @@ class RunMap:
         self.level = self.make_level_dict()
         self.player = self.map.get_player()
 
-        #load images
+        # load images
         self.level_1_img = pygame.image.load('assets/Map 1.png')
         self.level_2_img = pygame.image.load('assets/Map 2.png')
         self.level_3_img = pygame.image.load('assets/Map 3.png')
@@ -141,26 +142,26 @@ class RunMap:
         if self.map.get_name() == "16":
             self.surf.blit(self.level_16_img, (0, 0))
 
-    def make_level_dict(self): # lưu vị trí i, j và trạng thái ô
+    def make_level_dict(self):  # lưu vị trí i, j và trạng thái ô
         level = {}
         for j, row in enumerate(self.map.get_level()):
             for i, ent in enumerate(row):
                 level[(i + 2, j + 2)] = ent
         return level
 
-    def re_make_window(self, surf, level): # vẽ map
-        block_size = self.settings.block_size 
+    def re_make_window(self, surf, level):  # vẽ map
+        block_size = self.settings.block_size
         for pos, ent in level.items():
             ent.draw(surf, pos, block_size)
         pygame.display.update()
 
-    def check_star(self, level): # kiểm tra xem đã ăn lấy "cake" chưa
+    def check_star(self, level):  # kiểm tra xem đã ăn lấy "cake" chưa
         for pos, ent in level.items():
             if isinstance(ent.content, star):
                 return False
         return True
 
-    def check_flag(self, level): # kiểm tra xem đã lấy được "flag" chưa
+    def check_flag(self, level):  # kiểm tra xem đã lấy được "flag" chưa
         for pos, ent in level.items():
             if isinstance(ent, flag):
                 if not isinstance(ent.content, player):
@@ -172,11 +173,13 @@ class RunMap:
 
         while level_not_done:
             self.draw_map()
-            
-            sum_key = self.settings.font.render(f"{self.player.get_key_run(self.level, self.keys) - self.player.get_lock_run(self.level, self.locks)}", 1, (255, 255, 255))
+
+            sum_key = self.settings.font.render(
+                f"{self.player.get_key_run(self.level, self.keys) - self.player.get_lock_run(self.level, self.locks)}",
+                1, (255, 255, 255))
             self.surf.blit(sum_key, (783, 520))
 
-            keys=pygame.key.get_pressed()
+            keys = pygame.key.get_pressed()
             if keys[pygame.K_ESCAPE]:
                 time.sleep(0.2)
                 return
@@ -197,6 +200,4 @@ class RunMap:
                 return
 
             self.re_make_window(self.surf, self.level)
-            
-            
 
