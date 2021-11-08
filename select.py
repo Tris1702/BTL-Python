@@ -35,7 +35,7 @@ class Select:
         if self.next_slide:
             #level 1
             if self.level_1_button.draw(surf):
-                time.sleep(0.1)
+                time.sleep(0.2)
                 map_run.RunMap(self.maps[0], surf).run_map()
                 self.maps[0].set_level(maps.Map1().get_level())
 
@@ -46,7 +46,7 @@ class Select:
             level_2_img = pygame.image.load(img)
             level_2_button = buttons.Buttons(362, 214, level_2_img, 1)
             if level_2_button.draw(surf):
-                time.sleep(0.1)
+                time.sleep(0.2)
                 if self.maps[0].get_lock_level():
                     map_run.RunMap(self.maps[1], surf).run_map()
                     self.maps[1].set_level(maps.Map2().get_level())
@@ -58,7 +58,7 @@ class Select:
             level_3_img = pygame.image.load(img)
             level_3_button = buttons.Buttons(575, 214, level_3_img, 1)
             if level_3_button.draw(surf):
-                time.sleep(0.1)
+                time.sleep(0.2)
                 if self.maps[1].get_lock_level():
                     map_run.RunMap(self.maps[2], surf).run_map()
                     self.maps[2].set_level(maps.Map3().get_level())
@@ -70,7 +70,7 @@ class Select:
             level_4_img = pygame.image.load(img)
             level_4_button = buttons.Buttons(781, 214, level_4_img, 1)
             if level_4_button.draw(surf):
-                time.sleep(0.1)
+                time.sleep(0.2)
                 if self.maps[2].get_lock_level():
                     map_run.RunMap(self.maps[3], surf).run_map()
                     self.maps[3].set_level(maps.Map4().get_level())
@@ -82,7 +82,7 @@ class Select:
             level_5_img = pygame.image.load(img)
             level_5_button = buttons.Buttons(156, 428, level_5_img, 1)
             if level_5_button.draw(surf):
-                time.sleep(0.1)
+                time.sleep(0.2)
                 if self.maps[3].get_lock_level():
                     map_run.RunMap(self.maps[4], surf).run_map()
                     self.maps[4].set_level(maps.Map5().get_level())
@@ -94,7 +94,7 @@ class Select:
             level_6_img = pygame.image.load(img)
             level_6_button = buttons.Buttons(369, 428, level_6_img, 1)
             if level_6_button.draw(surf):
-                time.sleep(0.1)
+                time.sleep(0.2)
                 if self.maps[4].get_lock_level():
                     map_run.RunMap(self.maps[5], surf).run_map()
                     self.maps[5].set_level(maps.Map6().get_level())
@@ -106,7 +106,7 @@ class Select:
             level_7_img = pygame.image.load(img)
             level_7_button = buttons.Buttons(575, 428, level_7_img, 1)
             if level_7_button.draw(surf):
-                time.sleep(0.1)
+                time.sleep(0.2)
                 if self.maps[4].get_lock_level():
                     map_run.RunMap(self.maps[6], surf).run_map()
                     self.maps[6].set_level(maps.Map7().get_level())
@@ -118,7 +118,7 @@ class Select:
             level_8_img = pygame.image.load(img)
             level_8_button = buttons.Buttons(781, 428, level_8_img, 1)
             if level_8_button.draw(surf):
-                time.sleep(0.1)
+                time.sleep(0.2)
                 if self.maps[6].get_lock_level():
                     map_run.RunMap(self.maps[7], surf).run_map()
                     self.maps[7].set_level(maps.Map8().get_level())
@@ -134,7 +134,7 @@ class Select:
             level_9_img = pygame.image.load(img)
             level_9_button = buttons.Buttons(156, 214, level_9_img, 1)
             if level_9_button.draw(surf):
-                time.sleep(0.1)
+                time.sleep(0.2)
                 if self.maps[7].get_lock_level():
                     map_run.RunMap(self.maps[8], surf).run_map()
                     self.maps[8].set_level(maps.Map9().get_level())
@@ -146,7 +146,7 @@ class Select:
             level_10_img = pygame.image.load(img)
             level_10_button = buttons.Buttons(362, 214, level_10_img, 1)
             if level_10_button.draw(surf):
-                time.sleep(0.1)
+                time.sleep(0.2)
                 if self.maps[8].get_lock_level():
                     map_run.RunMap(self.maps[9], surf).run_map()
                     self.maps[9].set_level(maps.Map10().get_level())
@@ -158,7 +158,7 @@ class Select:
             level_11_img = pygame.image.load(img)
             level_11_button = buttons.Buttons(575, 214, level_11_img, 1)
             if level_11_button.draw(surf):
-                time.sleep(0.1)
+                time.sleep(0.2)
                 if self.maps[9].get_lock_level():
                     map_run.RunMap(self.maps[10], surf).run_map()
                     self.maps[10].set_level(maps.Map11().get_level())
@@ -170,7 +170,7 @@ class Select:
             level_12_img = pygame.image.load(img)
             level_12_button = buttons.Buttons(781, 214, level_12_img, 1)
             if level_12_button.draw(surf):
-                time.sleep(0.1)
+                time.sleep(0.2)
                 if self.maps[10].get_lock_level():
                     map_run.RunMap(self.maps[11], surf).run_map()
                     self.maps[11].set_level(maps.Map12().get_level())
@@ -182,7 +182,7 @@ class Select:
             level_13_img = pygame.image.load(img)
             level_13_button = buttons.Buttons(156, 428, level_13_img, 1)
             if level_13_button.draw(surf):
-                time.sleep(0.1)
+                time.sleep(0.2)
                 if self.maps[11].get_lock_level():
                     map_run.RunMap(self.maps[12], surf).run_map()
                     self.maps[12].set_level(maps.Map13().get_level())
@@ -194,7 +194,7 @@ class Select:
             level_14_img = pygame.image.load(img)
             level_14_button = buttons.Buttons(369, 428, level_14_img, 1)
             if level_14_button.draw(surf):
-                time.sleep(0.1)
+                time.sleep(0.2)
                 if self.maps[12].get_lock_level():
                     map_run.RunMap(self.maps[13], surf).run_map()
                     self.maps[13].set_level(maps.Map14().get_level())
@@ -206,7 +206,7 @@ class Select:
             level_15_img = pygame.image.load(img)
             level_15_button = buttons.Buttons(575, 428, level_15_img, 1)
             if level_15_button.draw(surf):
-                time.sleep(0.1)
+                time.sleep(0.2)
                 if self.maps[13].get_lock_level():
                     map_run.RunMap(self.maps[14], surf).run_map()
                     self.maps[14].set_level(maps.Map15().get_level())
@@ -218,6 +218,7 @@ class Select:
             level_16_img = pygame.image.load(img)
             level_16_button = buttons.Buttons(781, 428, level_16_img, 1)
             if level_16_button.draw(surf):
+                time.sleep(0.2)
                 if self.maps[14].get_lock_level():
                     map_run.RunMap(self.maps[15], surf).run_map()
                     self.maps[15].set_level(maps.Map16().get_level())
@@ -235,7 +236,7 @@ class Select:
                     pygame.quit()
 
             if self.back_button.draw(surf):
-                time.sleep(0.1)
+                time.sleep(0.2)
                 return
 
             self.select_level(surf)

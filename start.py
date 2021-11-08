@@ -12,7 +12,7 @@ class Start:
         self.surf = surf
         self.setting = Settings()
 
-        self.maps = [maps.Map1(), maps.Map2(), maps.Map3(), maps.Map4(), maps.Map5(), maps.Map6(), maps.Map7(), maps.Map8(),
+        self.maps = [maps.Map11(), maps.Map2(), maps.Map3(), maps.Map4(), maps.Map5(), maps.Map6(), maps.Map7(), maps.Map8(),
                      maps.Map9(), maps.Map10(), maps.Map11(), maps.Map12(), maps.Map13(), maps.Map14(), maps.Map15(), maps.Map16()]
 
         #load images
@@ -41,7 +41,7 @@ class Start:
         surf.blit(self.logo_img, (300, 40))
 
         if self.start_button.draw(surf):
-            time.sleep(0.1)
+            time.sleep(0.2)
             Select(self.maps).run(surf)
 
     def select_start(self):
@@ -56,13 +56,13 @@ class Start:
                 self.run(self.surf)
 
             if self.about_us_button.draw(self.surf):
-                time.sleep(0.1)
+                time.sleep(0.2)
                 click_about_us = True
 
             if click_about_us:
                 self.surf.blit(self.about_us_screen, (0, 0))
                 if self.exit_button.draw(self.surf):
-                    time.sleep(0.1)
+                    time.sleep(0.2)
                     click_about_us = False
 
             pygame.display.update()

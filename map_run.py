@@ -25,10 +25,10 @@ class RunMap:
         self.level_5_img = pygame.image.load('assets/Map 5.png')
         self.level_6_img = pygame.image.load('assets/Map 6.png')
         self.level_7_img = pygame.image.load('assets/Map 7.png')
-        self.level_8_img = pygame.image.load('assets/Map 6.png')
-        self.level_9_img = pygame.image.load('assets/Map 6.png')
-        self.level_10_img = pygame.image.load('assets/Map 6.png')
-        self.level_11_img = pygame.image.load('assets/Map 6.png')
+        self.level_8_img = pygame.image.load('assets/Map 8.png')
+        self.level_9_img = pygame.image.load('assets/Map 9.png')
+        self.level_10_img = pygame.image.load('assets/Map 10.png')
+        self.level_11_img = pygame.image.load('assets/Map 11.png')
         self.level_12_img = pygame.image.load('assets/Map 6.png')
         self.level_13_img = pygame.image.load('assets/Map 6.png')
         self.level_14_img = pygame.image.load('assets/Map 6.png')
@@ -167,13 +167,6 @@ class RunMap:
                     return False
         return True
 
-    def check_box(self, level): # kiểm tra xem đã đẩy hết "box" vào "hole" chưa
-        for pos, ent in level.items():
-            if isinstance(ent, hole):
-                if not isinstance(ent.content, box):
-                    return False
-        return True
-
     def run_map(self):
         level_not_done = True
 
@@ -185,20 +178,20 @@ class RunMap:
 
             keys=pygame.key.get_pressed()
             if keys[pygame.K_ESCAPE]:
-                time.sleep(0.1)
+                time.sleep(0.2)
                 return
 
             if keys[pygame.K_r]:
-                time.sleep(0.1)
+                time.sleep(0.2)
                 self.play_again()
 
             if self.back_button.draw(self.surf):
-                time.sleep(0.1)
+                time.sleep(0.2)
                 return
 
             self.player.move(self.level, self.keys, self.locks)
 
-            if self.check_flag(self.level) and self.check_star(self.level) and self.check_box(self.level):
+            if self.check_flag(self.level) and self.check_star(self.level):
                 self.map.set_lock_level(True)
                 time.sleep(0.5)
                 return
