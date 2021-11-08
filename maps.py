@@ -1,4 +1,4 @@
-from entities import box, flag, road, rock, empty, player, key, star, door, lock, hole
+from entities import box, flag, road, rock, empty, player, key, star, door, lock, hole, key_box, star_box
 from abc import ABC, abstractmethod
 
 r = rock()
@@ -439,14 +439,14 @@ class Map11(Map):
         self.lock_level = False
         self.level = [
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)],
-            [road(r), road(e), road(e), road(e), road(e), road(e), road(r), road(e), flag(e), road(r)],
+            [road(r), star_box(s), road(e), road(e), road(e), road(e), road(r), road(e), flag(e), road(r)],
             [road(r), road(e), road(e), road(r), road(r), road(e), road(b), door(e), door(e), road(r)],
-            [road(r), road(s), road(e), road(r), road(r), road(e), road(r), road(r), road(e), road(r)],
-            [road(r), road(e), road(b), road(p), road(e), road(e), road(s), road(e), road(b), road(r)],
+            [road(r), star_box(s), road(e), road(r), road(r), road(e), road(r), road(r), road(e), road(r)],
+            [road(r), road(e), road(b), road(p), road(e), road(e), star_box(s), road(e), road(b), road(r)],
             [road(r), road(e), road(r), road(b), road(r), door(e), road(r), road(r), road(r), road(r)],
             [road(r), road(e), road(e), road(e), road(e), road(e), road(r), road(e), road(e), road(r)],
             [road(r), road(b), road(r), road(r), road(r), door(e), road(r), road(e), road(r), road(r)],
-            [road(r), road(e), road(e), road(e), road(e), road(e), road(e), road(e), road(s), road(r)],
+            [road(r), road(e), road(e), road(e), road(e), road(e), road(e), road(e), star_box(s), road(r)],
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
         ]
 
@@ -476,14 +476,16 @@ class Map12(Map):
     def __init__(self):
         self.lock_level = False
         self.level = [
-            [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)],
-            [road(r), road(e), road(b), hole(e), road(r), road(r), road(r), road(r)],
-            [road(r), road(e), flag(e), hole(e), hole(e), road(p), road(r), road(r)],
-            [road(r), road(e), road(e), road(r), road(r), road(b), road(r), road(r)],
-            [road(r), road(r), road(e), road(e), road(r), road(e), road(e), road(r)],
-            [road(r), road(r), road(b), road(e), road(e), road(e), road(e), road(r)],
-            [road(r), road(r), road(e), road(e), road(r), road(r), road(r), road(r)],
-            [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
+            [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)],
+            [road(r), road(s), road(e), road(k), road(b), road(e), road(e), road(e), road(s), road(r)],
+            [road(r), road(r), door(e), road(r), road(r), door(e), road(r), road(r), road(l), road(r)],
+            [road(r), road(s), door(e), road(e), road(e), road(b), road(e), road(e), road(e), road(r)],
+            [road(r), road(e), road(r), door(e), road(e), road(r), road(r), door(e), road(r), road(r)],
+            [road(r), road(e), road(e), road(b), road(e), road(e), road(e), road(e), road(k), road(r)],
+            [road(r), road(r), door(e), road(r), road(e), door(l), road(r), door(e), road(r), road(r)],
+            [road(r), flag(e), road(e), road(e), road(l), road(e), road(e), road(e), road(e), road(r)],
+            [road(r), road(r), road(p), road(e), road(r), road(e), road(r), road(s), road(e), road(r)],
+            [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
         ]
 
     def get_name(self):

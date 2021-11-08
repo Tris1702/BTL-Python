@@ -60,6 +60,24 @@ class hole(block):
         surf.blit(image, (i * block_size + 10, j * block_size + 10))
         self.content.draw(surf, pos, block_size)
 
+class key_box(block):
+    def draw(self, surf, pos, block_size):
+        i = pos[0]
+        j = pos[1]
+        pygame.draw.rect(surf, black, (i * block_size, j * block_size, block_size, block_size))
+        image = pygame.image.load('assets/key.png')
+        surf.blit(image, (i * block_size + 10, j * block_size + 10))
+        self.content.draw(surf, pos, block_size)
+
+class star_box(block):
+    def draw(self, surf, pos, block_size):
+        i = pos[0]
+        j = pos[1]
+        pygame.draw.rect(surf, black, (i * block_size, j * block_size, block_size, block_size))
+        image = pygame.image.load('assets/cake.png')
+        surf.blit(image, (i * block_size + 12, j * block_size + 12))
+        self.content.draw(surf, pos, block_size)
+
 
 class content(ABC):
     @abstractclassmethod
@@ -144,8 +162,8 @@ class player(content):
         current = level[(i, j)]
         next_elm = level[(i + dir_x, j + dir_y)]
         next_ent = next_elm.content
-        back_elm = level[(i - dir_x, j - dir_y)]
-        back_ent = back_elm.content
+        # back_elm = level[(i - dir_x, j - dir_y)]
+        # back_ent = back_elm.content
         try:
             next_next_elm = level[(i + 2 * dir_x, j + 2 * dir_y)]
         except:
@@ -168,6 +186,10 @@ class player(content):
                 else:
                     current.content = empty()
                     next_elm.content = self
+            elif isinstance(next_elm, star_box):
+                current.content = empty()
+                next_elm = road()
+                next_elm.content = self
             elif isinstance(next_ent, key):
                 if isinstance(current, door):
                     current.content = rock()
@@ -190,11 +212,23 @@ class player(content):
                 current.content = empty()
                 next_elm.content = self
                 next_next_elm.content = box()
-        else:
-            if isinstance(back_ent, box) and isinstance(next_ent, empty):
-                current.content = box()
-                back_elm.content = empty()
+            elif isinstance(next_ent, box) and isinstance(next_next_elm, star_box) and isinstance(next_next_ent, star):
+                current.content = empty()
                 next_elm.content = self
+                next_next_elm.content = box()
+            elif isinstance(next_ent, box) and isinstance(next_elm, star_box):
+                current.content = empty()
+                next_elm = road()
+                next_elm.content = self
+            elif isinstance(next_ent, box) and isinstance(next_next_elm, key_box) and isinstance(next_next_ent, star):
+                current.content = empty()
+                next_elm.content = self
+                next_next_elm.content = box()
+        # else:
+        #     if isinstance(back_ent, box) and isinstance(next_ent, empty):
+        #         current.content = box()
+        #         back_elm.content = empty()
+        #         next_elm.content = self
 
     def get_input(self):
         for event in pygame.event.get():

@@ -30,7 +30,7 @@ class RunMap:
         self.level_9_img = pygame.image.load('assets/Map 9.png')
         self.level_10_img = pygame.image.load('assets/Map 10.png')
         self.level_11_img = pygame.image.load('assets/Map 11.png')
-        self.level_12_img = pygame.image.load('assets/Map 6.png')
+        self.level_12_img = pygame.image.load('assets/Map 12.png')
         self.level_13_img = pygame.image.load('assets/Map 6.png')
         self.level_14_img = pygame.image.load('assets/Map 6.png')
         self.level_15_img = pygame.image.load('assets/Map 6.png')
