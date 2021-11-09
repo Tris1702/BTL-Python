@@ -12,9 +12,8 @@ class Start:
         self.surf = surf
         self.setting = Settings()
 
-        self.maps = [maps.Map1(), maps.Map2(), maps.Map3(), maps.Map4(), maps.Map5(), maps.Map6(), maps.Map7(),
-                     maps.Map8(), maps.Map1(), maps.Map2(), maps.Map3(), maps.Map4(), maps.Map5(), maps.Map6(), maps.Map7(),
-                     maps.Map8()]
+        self.maps = [maps.Map11(), maps.Map2(), maps.Map3(), maps.Map4(), maps.Map5(), maps.Map6(), maps.Map7(), maps.Map8(),
+                     maps.Map9(), maps.Map10(), maps.Map11(), maps.Map12(), maps.Map13(), maps.Map14(), maps.Map15(), maps.Map16()]
 
         #load images
         self.start_img = pygame.image.load('assets/Start.png')
@@ -29,12 +28,11 @@ class Start:
         self.exit_img = pygame.image.load('assets/Exit.png')
 
         #create button instances
-        self.start_button = buttons.Buttons(410, 530, self.start_img, 1)
+        self.start_button = buttons.Buttons(400, 530, self.start_img, 1)
         self.about_us_button = buttons.Buttons(982, 626, self.about_us, 1)
-        self.exit_button = buttons.Buttons(813, 127, self.exit_img, 1)
+        self.exit_button = buttons.Buttons(810, 155, self.exit_img, 1)
 
         self.select_start()
-        
 
     def run(self, surf):
 
@@ -45,7 +43,6 @@ class Start:
         if self.start_button.draw(surf):
             time.sleep(0.1)
             Select(self.maps).run(surf)
-
 
     def select_start(self):
 

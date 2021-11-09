@@ -46,6 +46,8 @@ class door(block):
         image = pygame.image.load('assets/door.png')
         surf.blit(image, (i * block_size, j * block_size))
         self.content.draw(surf,  pos, block_size)
+
+
     
 class hole(block):
     def draw(self, surf,  pos, block_size):
@@ -86,7 +88,7 @@ class empty(content):
     def draw(self, surf, pos, block_size):
         pass
 
-class key(content):
+class key(content):~
     def __init__(self):
         self.image = pygame.image.load('assets/key.png')
         self.rect = self.image.get_rect()
@@ -108,7 +110,7 @@ class lock(content):
 
 class star(content):
     def __init__(self):
-        self.image = pygame.image.load('assets/star.png')
+        self.image = pygame.image.load('assets/cake.png')
         self.rect = self.image.get_rect()
     
     def draw(self, surf, pos, block_size):

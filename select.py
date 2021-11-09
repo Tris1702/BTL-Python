@@ -137,7 +137,7 @@ class Select:
                 time.sleep(0.1)
                 if self.maps[7].get_lock_level():
                     map_run.RunMap(self.maps[8], surf).run_map()
-                    self.maps[8].set_level(maps.Map1().get_level())
+                    self.maps[8].set_level(maps.Map9().get_level())
 
             # level 10
             img = 'assets/Lock level.png'
@@ -149,7 +149,7 @@ class Select:
                 time.sleep(0.1)
                 if self.maps[8].get_lock_level():
                     map_run.RunMap(self.maps[9], surf).run_map()
-                    self.maps[9].set_level(maps.Map2().get_level())
+                    self.maps[9].set_level(maps.Map10().get_level())
 
             # level 11
             img = 'assets/Lock level.png'
@@ -161,7 +161,7 @@ class Select:
                 time.sleep(0.1)
                 if self.maps[9].get_lock_level():
                     map_run.RunMap(self.maps[10], surf).run_map()
-                    self.maps[10].set_level(maps.Map3().get_level())
+                    self.maps[10].set_level(maps.Map11().get_level())
 
             # level 12
             img = 'assets/Lock level.png'
@@ -173,7 +173,7 @@ class Select:
                 time.sleep(0.1)
                 if self.maps[10].get_lock_level():
                     map_run.RunMap(self.maps[11], surf).run_map()
-                    self.maps[11].set_level(maps.Map4().get_level())
+                    self.maps[11].set_level(maps.Map12().get_level())
 
             # level 13
             img = 'assets/Lock level.png'
@@ -185,7 +185,7 @@ class Select:
                 time.sleep(0.1)
                 if self.maps[11].get_lock_level():
                     map_run.RunMap(self.maps[12], surf).run_map()
-                    self.maps[12].set_level(maps.Map5().get_level())
+                    self.maps[12].set_level(maps.Map13().get_level())
 
             # level 14
             img = 'assets/Lock level.png'
@@ -197,7 +197,7 @@ class Select:
                 time.sleep(0.1)
                 if self.maps[12].get_lock_level():
                     map_run.RunMap(self.maps[13], surf).run_map()
-                    self.maps[13].set_level(maps.Map6().get_level())
+                    self.maps[13].set_level(maps.Map14().get_level())
 
             # level 15
             img = 'assets/Lock level.png'
@@ -209,7 +209,7 @@ class Select:
                 time.sleep(0.1)
                 if self.maps[13].get_lock_level():
                     map_run.RunMap(self.maps[14], surf).run_map()
-                    self.maps[14].set_level(maps.Map7().get_level())
+                    self.maps[14].set_level(maps.Map15().get_level())
 
             # level 16
             img = 'assets/Lock level.png'
@@ -220,7 +220,7 @@ class Select:
             if level_16_button.draw(surf):
                 if self.maps[14].get_lock_level():
                     map_run.RunMap(self.maps[15], surf).run_map()
-                    self.maps[15].set_level(maps.Map8().get_level())
+                    self.maps[15].set_level(maps.Map16().get_level())
 
             if self.next_left_button.draw(surf):
                 time.sleep(0.2)

@@ -13,5 +13,6 @@ class Settings:
         self.block_size = 55 # kích thước 1 ô
 
         #font
+        self.font_loading = pygame.font.SysFont("Showcard Gothic", 45)
         self.font = pygame.font.SysFont("Showcard Gothic", 35)
         

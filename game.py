@@ -48,9 +48,9 @@ while True:
 
 	screen.fill(setting.background_color)
 
-	loading = setting.font.render("Loading ...", 1, (255,255,255))
+	loading = setting.font_loading.render("Loading ...", 1, (255, 255, 255))
 	screen.blit(loading, (435, 400))
-    
+
 	if not loading_finished:
 		loading_bar_width = loading_progress / WORK * 400
 

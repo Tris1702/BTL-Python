@@ -93,14 +93,14 @@ class Map2(Map):
         self.lock_level = False
         self.level = [
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)], 
-            [road(r), road(s), road(e), road(e), road(e), road(r), road(r), road(r), road(r), road(r)],
-            [road(r), road(e), road(r), road(r), road(e), road(e), road(e), road(r), road(s), road(r)],
-            [road(r), road(e), road(e), road(r), road(r), road(r), road(e), road(r), road(e), road(r)],
-            [road(r), road(e), road(e), road(e), road(e), road(r), road(s), road(r), road(e), road(r)],
-            [road(r), road(e), road(e), road(r), road(e), road(e), road(r), road(e), road(e), road(r)],
-            [road(r), road(r), road(r), road(r), road(r), road(e), road(e), road(e), road(e), road(r)],
-            [road(r), road(r), road(e), road(e), road(e), road(r), road(e), road(p), road(r), road(r)],
-            [road(r), road(s), road(e), road(r), flag(e), road(e), road(e), road(e), road(r), road(r)],
+            [road(r), road(s), road(r), road(s), road(e), road(e), road(e), road(r), road(s), road(r)],
+            [road(r), road(e), road(r), road(r), road(r), road(e), road(e), road(r), road(e), road(r)],
+            [road(r), road(e), road(e), road(p), road(r), road(e), road(e), road(r), road(e), road(r)],
+            [road(r), road(e), road(r), road(r), road(r), road(e), road(e), road(r), road(e), road(r)],
+            [road(r), road(e), road(r), road(e), road(e), road(e), road(e), road(e), road(e), road(r)],
+            [road(r), road(e), flag(e), road(r), road(e), road(r), road(e), road(e), road(r), road(r)],
+            [road(r), road(e), road(r), road(e), road(e), road(r), road(r), road(e), road(e), road(r)],
+            [road(r), road(e), road(e), road(e), road(e), road(r), road(s), road(e), road(e), road(r)],
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
@@ -129,14 +129,14 @@ class Map3(Map):
         self.lock_level = False
         self.level = [
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)], 
-            [road(r), road(s), road(e), road(e), road(r), road(e), road(e), road(e), road(s), road(r)],
-            [road(r), road(r), road(r), road(e), road(e), road(e), road(r), door(e), road(r), road(r)],
-            [road(r), road(e), road(e), road(e), road(e), road(r), road(r), road(e), road(r), road(r)],
-            [road(r), road(e), road(r), road(r), road(r), flag(e), road(r), road(e), road(e), road(r)],
-            [road(r), road(e), road(e), road(e), road(r), road(e), road(s), road(r), road(e), road(r)],
-            [road(r), road(e), road(r), door(e), road(r), road(e), road(r), road(e), road(e), road(r)],
-            [road(r), road(e), road(r), road(e), road(e), door(e), road(r), road(e), road(r), road(r)],
-            [road(r), road(e), road(s), road(r), road(p), road(e), road(e), road(e), road(r), road(r)],
+            [road(r), road(s), road(e), road(e), road(e), road(e), road(e), road(e), road(e), road(r)],
+            [road(r), road(r), road(r), road(e), road(e), road(r), road(e), road(e), road(e), road(r)],
+            [road(r), road(s), road(r), road(e), road(r), road(s), road(r), road(e), road(e), road(r)],
+            [road(r), road(e), road(e), door(e), road(e), road(e), door(e), road(e), road(r), road(r)],
+            [road(r), road(e), road(r), road(e), road(r), road(r), road(r), road(e), road(e), road(r)],
+            [road(r), road(e), road(e), road(e), road(e), road(r), road(e), road(e), road(r), road(r)],
+            [road(r), road(r), road(r), road(r), road(e), road(r), door(e), road(e), road(e), road(r)],
+            [road(r), flag(e), road(e), road(e), road(e), road(e), road(s), road(r), road(p), road(r)],
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
@@ -165,14 +165,14 @@ class Map4(Map):
         self.lock_level = False
         self.level = [
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)], 
-            [road(r), flag(e), road(e), road(e), road(e), road(r), road(r), road(e), road(e), road(r)],
-            [road(r), road(r), road(r), road(e), road(s), road(r), road(e), door(e), door(e), road(r)],
-            [road(r), road(r), road(e), road(e), road(r), road(e), road(e), road(r), road(e), road(r)],
-            [road(r), road(r), road(e), road(r), road(e), road(p), road(r), road(e), road(e), road(r)],
-            [road(r), road(e), road(e), road(r), road(e), road(r), road(r), road(e), road(r), road(r)],
-            [road(r), road(e), road(r), door(e), door(e), road(s), road(e), road(e), road(r), road(r)],
-            [road(r), road(e), road(r), road(e), road(r), door(r), door(e), door(e), road(e), road(r)],
-            [road(r), road(e), road(e), road(e), road(r), road(e), road(e), door(s), road(s), road(r)],
+            [road(r), road(e), road(e), road(p), door(e), road(s), road(e), road(e), road(r), road(r)],
+            [road(r), road(e), road(e), road(r), road(e), road(r), road(e), road(e), road(r), road(r)],
+            [road(r), road(e), road(r), road(e), road(r), road(e), road(r), road(e), road(r), road(r)],
+            [road(r), road(e), road(r), flag(e), road(e), road(e), road(r), road(e), road(r), road(r)],
+            [road(r), door(e), road(e), road(r), road(e), road(r), road(e), road(e), road(r), road(r)],
+            [road(r), road(s), door(e), road(e), door(e), road(e), road(e), road(e), road(s), road(r)],
+            [road(r), road(r), door(e), road(r), road(r), road(r), door(e), road(r), road(r), road(r)],
+            [road(r), road(r), road(s), road(e), road(e), road(e), road(e), road(e), road(r), road(r)],
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
@@ -201,14 +201,14 @@ class Map5(Map):
         self.lock_level = False
         self.level = [
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)], 
-            [road(r), flag(e), road(e), road(e), road(e), road(r), road(r), road(e), road(e), road(r)],
-            [road(r), road(r), road(r), road(e), road(s), road(r), road(e), door(e), door(e), road(r)],
-            [road(r), road(r), road(e), road(e), road(r), road(e), road(e), road(r), road(e), road(r)],
-            [road(r), road(r), road(e), road(r), road(e), road(p), road(r), road(e), road(e), road(r)],
-            [road(r), road(e), road(e), road(r), road(e), road(r), road(r), road(e), road(r), road(r)],
-            [road(r), road(e), road(r), door(e), door(e), road(s), road(e), road(e), road(r), road(r)],
-            [road(r), road(e), road(r), road(e), road(r), door(r), door(e), door(e), road(e), road(r)],
-            [road(r), road(e), road(e), road(e), road(r), road(e), road(e), door(s), road(s), road(r)],
+            [road(r), road(p), road(e), door(s), road(e), road(e), door(s), road(e), door(s), road(r)],
+            [road(r), road(e), road(r), road(e), road(r), road(r), road(e), road(r), road(e), road(r)],
+            [road(r), door(s), road(e), door(e), road(e), road(e), door(s), road(e), door(s), road(r)],
+            [road(r), road(e), road(r), road(e), road(r), road(r), road(e), road(r), road(e), road(r)],
+            [road(r), road(e), road(r), road(e), road(r), road(r), road(e), road(r), road(e), road(r)],
+            [road(r), door(s), road(e), door(s), road(e), road(e), door(e), road(e), door(s), road(r)],
+            [road(r), road(e), road(r), road(e), road(r), road(r), road(e), road(r), road(e), road(r)],
+            [road(r), door(s), road(e), door(s), road(e), road(e), door(s), road(e), flag(e), road(r)],
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
@@ -237,14 +237,14 @@ class Map6(Map):
         self.lock_level = False
         self.level = [
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)], 
-            [road(r), road(e), road(k), road(s), road(r), road(e), road(e), road(e), road(r), road(r)],
-            [road(r), road(l), road(r), road(r), road(r), road(s), road(r), road(e), road(e), road(r)],
-            [road(r), road(e), road(e), road(e), road(e), road(l), road(r), road(r), road(e), road(r)],
-            [road(r), road(r), road(r), road(r), road(e), road(r), road(r), road(r), flag(e), road(r)],
-            [road(r), road(r), road(e), road(e), road(l), road(e), road(e), road(e), road(r), road(r)],
-            [road(r), road(s), road(k), road(r), road(r), road(r), road(k), road(k), road(e), road(r)],
-            [road(r), road(r), road(r), road(e), road(e), road(e), road(r), road(r), road(e), road(r)],
-            [road(r), road(s), road(e), road(e), road(r), road(e), road(l), road(e), road(p), road(r)],
+            [road(r), road(k), road(e), road(r), road(s), road(e), flag(e), road(r), road(k), road(r)],
+            [road(r), road(s), road(l), road(e), road(r), road(l), road(r), road(e), road(e), road(r)],
+            [road(r), road(r), road(r), road(e), road(e), road(e), road(e), road(e), road(e), road(r)],
+            [road(r), road(r), road(r), road(r), road(e), road(r), road(r), road(e), road(p), road(r)],
+            [road(r), road(k), road(e), road(e), road(l), road(e), road(r), road(r), road(r), road(r)],
+            [road(r), road(e), road(e), road(r), road(e), road(e), road(e), road(e), road(e), road(r)],
+            [road(r), road(l), road(r), road(r), road(r), road(e), road(e), road(r), road(e), road(r)],
+            [road(r), road(k), road(e), road(s), road(r), road(e), road(r), road(s), road(e), road(r)],
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
@@ -273,14 +273,14 @@ class Map7(Map):
         self.lock_level = False
         self.level = [
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)], 
-            [road(r), road(e), road(l), road(e), road(k), road(r), road(e), road(e), road(e), road(r)],
-            [road(r), road(e), road(r), road(e), road(e), road(e), road(e), road(r), road(l), road(r)],
-            [road(r), road(s), road(r), road(e), road(r), road(r), road(r), road(e), road(e), road(r)],
-            [road(r), road(r), road(r), road(e), road(e), door(e), road(l), road(k), road(p), road(r)],
-            [road(r), road(r), road(r), road(e), door(e), road(k), road(r), road(r), road(e), road(r)],
-            [road(r), road(s), road(e), door(e), flag(e), road(r), road(s), road(r), road(l), road(r)],
-            [road(r), road(l), road(r), road(r), road(r), road(e), road(e), road(r), road(e), road(r)],
-            [road(r), road(k), road(k), road(e), road(l), road(e), road(e), road(e), road(e), road(r)],
+            [road(r), road(e), road(k), road(s), road(r), road(e), road(e), road(e), road(e), road(r)],
+            [road(r), road(l), road(r), road(r), road(r), door(e), road(r), road(r), road(e), road(r)],
+            [road(r), road(e), road(e), road(e), road(e), road(e), road(r), road(s), road(e), road(r)],
+            [road(r), road(e), road(r), road(l), road(r), door(e), road(r), road(k), road(p), road(r)],
+            [road(r), road(l), road(r), door(e), road(r), road(e), road(r), road(r), road(l), road(r)],
+            [road(r), road(s), door(e), road(e), road(l), road(e), road(l), road(s), road(e), road(r)],
+            [road(r), road(e), road(r), flag(e), road(r), road(e), road(r), road(e), road(e), road(r)],
+            [road(r), door(s), road(k), door(k), road(r), road(s), road(r), road(e), road(e), road(r)],
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
     ]
     def get_name(self):
@@ -293,7 +293,7 @@ class Map7(Map):
         return len(self.level)
 
     def get_key(self):
-        return 5
+        return 4
 
     def get_lock(self):
         return 6
@@ -428,6 +428,196 @@ class Map11(Map):
     ]
     def get_name(self):
         return "11"
+
+    def get_width(self):
+        return len(self.level[0])
+
+    def get_height(self):
+        return len(self.level)
+
+    def get_key(self):
+        return 0
+
+    def get_lock(self):
+        return 0
+
+    def set_lock_level(self, lock):
+        self.lock_level = lock
+
+    def get_lock_level(self):
+        return self.lock_level
+
+
+class Map12(Map):
+    def __init__(self):
+        self.lock_level = False
+        self.level = [
+            [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)],
+            [road(r), road(e), road(e), road(e), road(e), road(r), road(e), road(e), road(e), road(r)],
+            [road(r), road(e), road(r), road(r), road(e), road(e), road(e), road(r), road(e), road(r)],
+            [road(r), road(e), road(e), road(r), road(r), road(r), road(r), road(r), road(e), road(r)],
+            [road(r), road(r), road(e), road(e), road(e), road(r), road(e), road(e), road(e), road(r)],
+            [road(r), road(r), road(r), road(r), road(e), road(r), road(e), road(r), road(r), road(r)],
+            [road(r), road(e), road(e), road(e), road(e), road(r), road(e), road(r), flag(e), road(r)],
+            [road(r), road(e), road(p), road(e), road(e), road(r), road(e), road(r), road(e), road(r)],
+            [road(r), road(e), road(e), road(e), road(e), road(r), road(e), road(e), road(e), road(r)],
+            [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
+        ]
+
+    def get_name(self):
+        return "12"
+
+    def get_width(self):
+        return len(self.level[0])
+
+    def get_height(self):
+        return len(self.level)
+
+    def get_key(self):
+        return 0
+
+    def get_lock(self):
+        return 0
+
+    def set_lock_level(self, lock):
+        self.lock_level = lock
+
+    def get_lock_level(self):
+        return self.lock_level
+
+
+class Map13(Map):
+    def __init__(self):
+        self.lock_level = False
+        self.level = [
+            [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)],
+            [road(r), road(e), road(e), road(e), road(e), road(r), road(e), road(e), road(e), road(r)],
+            [road(r), road(e), road(r), road(r), road(e), road(e), road(e), road(r), road(e), road(r)],
+            [road(r), road(e), road(e), road(r), road(r), road(r), road(r), road(r), road(e), road(r)],
+            [road(r), road(r), road(e), road(e), road(e), road(r), road(e), road(e), road(e), road(r)],
+            [road(r), road(r), road(r), road(r), road(e), road(r), road(e), road(r), road(r), road(r)],
+            [road(r), road(e), road(e), road(e), road(e), road(r), road(e), road(r), flag(e), road(r)],
+            [road(r), road(e), road(p), road(e), road(e), road(r), road(e), road(r), road(e), road(r)],
+            [road(r), road(e), road(e), road(e), road(e), road(r), road(e), road(e), road(e), road(r)],
+            [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
+        ]
+
+    def get_name(self):
+        return "13"
+
+    def get_width(self):
+        return len(self.level[0])
+
+    def get_height(self):
+        return len(self.level)
+
+    def get_key(self):
+        return 0
+
+    def get_lock(self):
+        return 0
+
+    def set_lock_level(self, lock):
+        self.lock_level = lock
+
+    def get_lock_level(self):
+        return self.lock_level
+
+
+class Map14(Map):
+    def __init__(self):
+        self.lock_level = False
+        self.level = [
+            [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)],
+            [road(r), road(e), road(e), road(e), road(e), road(r), road(e), road(e), road(e), road(r)],
+            [road(r), road(e), road(r), road(r), road(e), road(e), road(e), road(r), road(e), road(r)],
+            [road(r), road(e), road(e), road(r), road(r), road(r), road(r), road(r), road(e), road(r)],
+            [road(r), road(r), road(e), road(e), road(e), road(r), road(e), road(e), road(e), road(r)],
+            [road(r), road(r), road(r), road(r), road(e), road(r), road(e), road(r), road(r), road(r)],
+            [road(r), road(e), road(e), road(e), road(e), road(r), road(e), road(r), flag(e), road(r)],
+            [road(r), road(e), road(p), road(e), road(e), road(r), road(e), road(r), road(e), road(r)],
+            [road(r), road(e), road(e), road(e), road(e), road(r), road(e), road(e), road(e), road(r)],
+            [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
+        ]
+
+    def get_name(self):
+        return "14"
+
+    def get_width(self):
+        return len(self.level[0])
+
+    def get_height(self):
+        return len(self.level)
+
+    def get_key(self):
+        return 0
+
+    def get_lock(self):
+        return 0
+
+    def set_lock_level(self, lock):
+        self.lock_level = lock
+
+    def get_lock_level(self):
+        return self.lock_level
+
+
+class Map15(Map):
+    def __init__(self):
+        self.lock_level = False
+        self.level = [
+            [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)],
+            [road(r), road(e), road(e), road(e), road(e), road(r), road(e), road(e), road(e), road(r)],
+            [road(r), road(e), road(r), road(r), road(e), road(e), road(e), road(r), road(e), road(r)],
+            [road(r), road(e), road(e), road(r), road(r), road(r), road(r), road(r), road(e), road(r)],
+            [road(r), road(r), road(e), road(e), road(e), road(r), road(e), road(e), road(e), road(r)],
+            [road(r), road(r), road(r), road(r), road(e), road(r), road(e), road(r), road(r), road(r)],
+            [road(r), road(e), road(e), road(e), road(e), road(r), road(e), road(r), flag(e), road(r)],
+            [road(r), road(e), road(p), road(e), road(e), road(r), road(e), road(r), road(e), road(r)],
+            [road(r), road(e), road(e), road(e), road(e), road(r), road(e), road(e), road(e), road(r)],
+            [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
+        ]
+
+    def get_name(self):
+        return "15"
+
+    def get_width(self):
+        return len(self.level[0])
+
+    def get_height(self):
+        return len(self.level)
+
+    def get_key(self):
+        return 0
+
+    def get_lock(self):
+        return 0
+
+    def set_lock_level(self, lock):
+        self.lock_level = lock
+
+    def get_lock_level(self):
+        return self.lock_level
+
+
+class Map16(Map):
+    def __init__(self):
+        self.lock_level = False
+        self.level = [
+            [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)],
+            [road(r), road(e), road(e), road(e), road(e), road(r), road(e), road(e), road(e), road(r)],
+            [road(r), road(e), road(r), road(r), road(e), road(e), road(e), road(r), road(e), road(r)],
+            [road(r), road(e), road(e), road(r), road(r), road(r), road(r), road(r), road(e), road(r)],
+            [road(r), road(r), road(e), road(e), road(e), road(r), road(e), road(e), road(e), road(r)],
+            [road(r), road(r), road(r), road(r), road(e), road(r), road(e), road(r), road(r), road(r)],
+            [road(r), road(e), road(e), road(e), road(e), road(r), road(e), road(r), flag(e), road(r)],
+            [road(r), road(e), road(p), road(e), road(e), road(r), road(e), road(r), road(e), road(r)],
+            [road(r), road(e), road(e), road(e), road(e), road(r), road(e), road(e), road(e), road(r)],
+            [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
+        ]
+
+    def get_name(self):
+        return "16"
 
     def get_width(self):
         return len(self.level[0])
