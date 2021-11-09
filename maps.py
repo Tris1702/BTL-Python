@@ -558,9 +558,9 @@ class Map14(Map):
             [road(r), road(e), road(r), road(s), door(e), road(e), road(e), road(r), road(s), road(r)],
             [road(r), road(e), road(l), door(e), road(k), door(e), road(r), road(r), road(e), road(r)],
             [road(r), road(e), road(r), road(r), road(e), road(b), road(e), door(e), road(e), road(r)],
-            [road(r), road(e), road(r), road(s), road(k), road(l), road(s), road(r), road(e), road(r)],
-            [road(r), road(k), road(l), road(r), road(l), road(l), road(r), road(e), door(e), road(r)],
-            [road(r), road(e), road(l), road(s), road(e), road(e), road(e), door(e), road(s), road(r)],
+            [road(r), door(e), road(r), road(s), road(k), road(r), road(s), road(r), road(e), road(r)],
+            [road(r), road(e), road(r), road(r), road(l), road(r), road(r), road(e), door(e), road(r)],
+            [road(r), road(s), road(l), road(s), road(e), road(e), road(e), door(e), road(s), road(r)],
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
         ]
 
@@ -574,10 +574,10 @@ class Map14(Map):
         return len(self.level)
 
     def get_key(self):
-        return 3
+        return 2
 
     def get_lock(self):
-        return 7
+        return 4
 
     def set_lock_level(self, lock):
         self.lock_level = lock
