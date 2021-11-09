@@ -1,9 +1,10 @@
 import pygame
 import buttons
 import maps
-from entities import flag, player, star, hole, box
+from entities import flag, player, star
 from settings import Settings
 import time
+
 
 class RunMap:
     def __init__(self, map_obj, surf):
@@ -17,7 +18,7 @@ class RunMap:
         self.level = self.make_level_dict()
         self.player = self.map.get_player()
 
-        #load images
+        # load images
         self.level_1_img = pygame.image.load('assets/Map 1.png')
         self.level_2_img = pygame.image.load('assets/Map 2.png')
         self.level_3_img = pygame.image.load('assets/Map 3.png')
@@ -25,15 +26,15 @@ class RunMap:
         self.level_5_img = pygame.image.load('assets/Map 5.png')
         self.level_6_img = pygame.image.load('assets/Map 6.png')
         self.level_7_img = pygame.image.load('assets/Map 7.png')
-        self.level_8_img = pygame.image.load('assets/Map 6.png')
-        self.level_9_img = pygame.image.load('assets/Map 6.png')
-        self.level_10_img = pygame.image.load('assets/Map 6.png')
-        self.level_11_img = pygame.image.load('assets/Map 6.png')
-        self.level_12_img = pygame.image.load('assets/Map 6.png')
-        self.level_13_img = pygame.image.load('assets/Map 6.png')
-        self.level_14_img = pygame.image.load('assets/Map 6.png')
-        self.level_15_img = pygame.image.load('assets/Map 6.png')
-        self.level_16_img = pygame.image.load('assets/Map 6.png')
+        self.level_8_img = pygame.image.load('assets/Map 8.png')
+        self.level_9_img = pygame.image.load('assets/Map 9.png')
+        self.level_10_img = pygame.image.load('assets/Map 10.png')
+        self.level_11_img = pygame.image.load('assets/Map 11.png')
+        self.level_12_img = pygame.image.load('assets/Map 12.png')
+        self.level_13_img = pygame.image.load('assets/Map 13.png')
+        self.level_14_img = pygame.image.load('assets/Map 14.png')
+        self.level_15_img = pygame.image.load('assets/Map 15.png')
+        self.level_16_img = pygame.image.load('assets/Map 16.png')
         self.back_img = pygame.image.load('assets/Back.png')
 
         # create button instances
@@ -141,36 +142,29 @@ class RunMap:
         if self.map.get_name() == "16":
             self.surf.blit(self.level_16_img, (0, 0))
 
-    def make_level_dict(self): # lưu vị trí i, j và trạng thái ô
+    def make_level_dict(self):  # lưu vị trí i, j và trạng thái ô
         level = {}
         for j, row in enumerate(self.map.get_level()):
             for i, ent in enumerate(row):
                 level[(i + 2, j + 2)] = ent
         return level
 
-    def re_make_window(self, surf, level): # vẽ map
-        block_size = self.settings.block_size 
+    def re_make_window(self, surf, level):  # vẽ map
+        block_size = self.settings.block_size
         for pos, ent in level.items():
             ent.draw(surf, pos, block_size)
         pygame.display.update()
 
-    def check_star(self, level): # kiểm tra xem đã ăn lấy "cake" chưa
+    def check_star(self, level):  # kiểm tra xem đã ăn lấy "cake" chưa
         for pos, ent in level.items():
             if isinstance(ent.content, star):
                 return False
         return True
 
-    def check_flag(self, level): # kiểm tra xem đã lấy được "flag" chưa
+    def check_flag(self, level):  # kiểm tra xem đã lấy được "flag" chưa
         for pos, ent in level.items():
             if isinstance(ent, flag):
                 if not isinstance(ent.content, player):
-                    return False
-        return True
-
-    def check_box(self, level): # kiểm tra xem đã đẩy hết "box" vào "hole" chưa
-        for pos, ent in level.items():
-            if isinstance(ent, hole):
-                if not isinstance(ent.content, box):
                     return False
         return True
 
@@ -179,31 +173,31 @@ class RunMap:
 
         while level_not_done:
             self.draw_map()
-            
-            sum_key = self.settings.font.render(f"{self.player.get_key_run(self.level, self.keys) - self.player.get_lock_run(self.level, self.locks)}", 1, (255, 255, 255))
+
+            sum_key = self.settings.font.render(
+                f"{self.player.get_key_run(self.level, self.keys) - self.player.get_lock_run(self.level, self.locks)}",
+                1, (255, 255, 255))
             self.surf.blit(sum_key, (783, 520))
 
-            keys=pygame.key.get_pressed()
+            keys = pygame.key.get_pressed()
             if keys[pygame.K_ESCAPE]:
-                time.sleep(0.1)
+                time.sleep(0.2)
                 return
 
             if keys[pygame.K_r]:
-                time.sleep(0.1)
+                time.sleep(0.2)
                 self.play_again()
 
             if self.back_button.draw(self.surf):
-                time.sleep(0.1)
+                time.sleep(0.2)
                 return
 
             self.player.move(self.level, self.keys, self.locks)
 
-            if self.check_flag(self.level) and self.check_star(self.level) and self.check_box(self.level):
+            if self.check_flag(self.level) and self.check_star(self.level):
                 self.map.set_lock_level(True)
                 time.sleep(0.5)
                 return
 
             self.re_make_window(self.surf, self.level)
-            
-            
 
