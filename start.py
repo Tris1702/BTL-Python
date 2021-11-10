@@ -13,7 +13,7 @@ class Start:
         self.surf = surf
         self.setting = Settings()
 
-        self.maps = [maps.Map1(), maps.Map2(), maps.Map3(), maps.Map4(), maps.Map5(), maps.Map6(), maps.Map7(), maps.Map8(),
+        self.maps = [maps.Map5(), maps.Map2(), maps.Map3(), maps.Map4(), maps.Map5(), maps.Map6(), maps.Map7(), maps.Map8(),
                      maps.Map9(), maps.Map10(), maps.Map11(), maps.Map12(), maps.Map13(), maps.Map14(), maps.Map15(), maps.Map16()]
 
         # load images

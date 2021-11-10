@@ -217,8 +217,8 @@ class Map5(Map):
             [road(r), road(e), road(r), road(e), road(r), road(r), road(e), road(r), road(e), road(r)],
             [road(r), road(e), road(r), road(e), road(r), road(r), road(e), road(r), road(e), road(r)],
             [road(r), door(s), road(e), door(s), road(e), road(e), door(e), road(e), door(s), road(r)],
-            [road(r), road(e), road(r), road(e), road(r), road(r), road(e), road(r), road(e), road(r)],
-            [road(r), door(s), road(e), door(s), road(e), road(e), door(s), road(e), flag(e), road(r)],
+            [road(r), road(e), road(r), road(e), road(r), road(r), road(e), road(r), door(e), road(r)],
+            [road(r), door(s), road(e), door(s), road(e), road(e), door(s), door(e), flag(e), road(r)],
             [road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r), road(r)]
         ]
 
