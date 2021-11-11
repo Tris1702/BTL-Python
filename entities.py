@@ -36,7 +36,7 @@ class flag(block):
         i = pos[0]
         j = pos[1]
         pygame.draw.rect(surf, black, (i * block_size, j * block_size, block_size, block_size))
-        image = pygame.image.load('assets/chanh chanh.png')
+        image = pygame.image.load('assets/chanhchanh 1.png')
         surf.blit(image, (i * block_size + 6, j * block_size + 5))
         self.content.draw(surf, pos, block_size)
 

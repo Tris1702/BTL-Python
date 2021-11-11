@@ -36,6 +36,7 @@ class RunMap:
         self.level_15_img = pygame.image.load('assets/Map 15.png')
         self.level_16_img = pygame.image.load('assets/Map 16.png')
         self.back_img = pygame.image.load('assets/Back.png')
+        self.chanhchanh_img = pygame.image.load("assets/chanh chanh.png")
 
         # create button instances
         self.back_button = buttons.Buttons(33, 33, self.back_img, 1)
@@ -152,7 +153,11 @@ class RunMap:
     def re_make_window(self, surf, level):  # vẽ map
         block_size = self.settings.block_size
         for pos, ent in level.items():
-            ent.draw(surf, pos, block_size)
+            if self.check_star(level) and isinstance(ent, flag):
+                pygame.draw.rect(surf, "#0D0E2E", (pos[0] * block_size, pos[1] * block_size, block_size, block_size))
+                surf.blit(self.chanhchanh_img, (pos[0] * block_size + 6, pos[1] * block_size + 5))
+            else:
+                ent.draw(surf, pos, block_size)
         pygame.display.update()
 
     def check_star(self, level):  # kiểm tra xem đã ăn lấy "cake" chưa
